@@ -1,134 +1,167 @@
-<!DOCTYPE html><html lang="en"><head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mircad Design Service</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background-color: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f7fb;
       color: #333;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
     }
     header {
-      background-color: #1f3c88;
-      color: #fff;
-      padding: 4rem 2rem;
+      background-color: #1f4e79;
+      color: white;
+      padding: 30px 20px;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .cta {
-      background-color: #ff6b00;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
+    .slogan {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-style: italic;
     }
     section {
-      padding: 3rem 2rem;
-      max-width: 960px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
     }
-    h2 {
-      color: #1f3c88;
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-    .services, .testimonials, .portfolio {
+    .services, .testimonials {
       display: grid;
-      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
     .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    .portfolio img, .testimonials img {
-      width: 100%;
+      background-color: white;
+      padding: 20px;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-    form input, form textarea {
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .contact-form input, .contact-form textarea {
       width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
+      padding: 10px;
+      margin: 8px 0;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 5px;
     }
-    form button {
-      background-color: #1f3c88;
+    .contact-form button {
+      background-color: #1f4e79;
       color: white;
-      padding: 0.75rem 1.5rem;
+      padding: 10px 20px;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
       cursor: pointer;
     }
+    .contact-form button:hover {
+      background-color: #163c5a;
+    }
+    .image-preview {
+      width: 100%;
+      height: 200px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
     footer {
-      background-color: #1f3c88;
-      color: #fff;
-      padding: 2rem;
       text-align: center;
-      font-size: 0.9rem;
+      padding: 20px;
+      background-color: #1f4e79;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .services, .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
-</head><body>
+</head>
+<body>
   <header>
     <h1>Mircad Design Service</h1>
-    <p>Precision Metal Fabrication & CAD Drafting — Your Vision, Engineered to Perfection</p>
-    <a class="cta" href="https://wa.me/601169429738">Contact on WhatsApp</a>
-  </header>  <section>
+    <div class="slogan">Designing Precision. Delivering Innovation.</div>
+  </header>
+
+  <section>
     <h2>Our Services</h2>
     <div class="services">
-      <div class="card">3D CAD Modelling for Metal Fabrication</div>
-      <div class="card">Technical Drawing for Manufacturing</div>
-      <div class="card">Custom Tank, Bracket & Panel Design</div>
-      <div class="card">Decorative Metalwork Panels</div>
-      <div class="card">Construction Machine Parts Drafting</div>
-      <div class="card">Jig & Fixture Design</div>
+      <div class="card">
+        <h3>Metal Fabrication Design</h3>
+        <p>Custom tank, enclosure, frame, and structural part design for fabrication.</p>
+      </div>
+      <div class="card">
+        <h3>Decorative Metal Panel Design</h3>
+        <p>House number plates, fence designs, and aesthetic laser-cut metal panels.</p>
+      </div>
+      <div class="card">
+        <h3>Construction Machine Drafting</h3>
+        <p>Detailed CAD for compactors, mixers, vibrators, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Jig & Fixture Design</h3>
+        <p>Precision jigs and fixtures to improve assembly and production processes.</p>
+      </div>
     </div>
-  </section>  <section>
-    <h2>Portfolio Preview</h2>
-    <div class="portfolio">
-      <div class="card"><img src="https://via.placeholder.com/600x400?text=Tank+Design+Preview" alt="Tank Design"></div>
-      <div class="card"><img src="https://via.placeholder.com/600x400?text=Decorative+Panel+Preview" alt="Decorative Panel"></div>
-      <div class="card"><img src="https://via.placeholder.com/600x400?text=Machine+Part+Preview" alt="Machine Part"></div>
-    </div>
-  </section>  <section>
-    <h2>Testimonials</h2>
+    <a class="whatsapp-btn" href="https://wa.me/601169429738" target="_blank">Request Quotation via WhatsApp</a>
+  </section>
+
+  <section>
+    <h2>Design Showcase</h2>
+    <div class="image-preview">[Sample Design Image Here]</div>
+  </section>
+
+  <section>
+    <h2>What Clients Say</h2>
     <div class="testimonials">
-      <div class="card">
-        <img src="https://via.placeholder.com/600x200?text=Testimonial+1" alt="Testimonial 1">
-        <p>“Fantastic design quality and fast turnaround!”</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/600x200?text=Testimonial+2" alt="Testimonial 2">
-        <p>“Professional service with clear communication.”</p>
-      </div>
+      <div class="card">“Great design service! Fast and detailed.” – [Client Name]</div>
+      <div class="card">“Impressive CAD quality. Will return!” – [Client Name]</div>
     </div>
-  </section>  <section>
+  </section>
+
+  <section>
     <h2>Contact Us</h2>
-    <form action="mailto:amircad77@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+    <form class="contact-form" action="mailto:amircad77@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </section>  <footer>
+  </section>
+
+  <footer>
     &copy; 2025 Mircad Design Service. All rights reserved.
   </footer>
-</body></html>
+</body>
+</html>
