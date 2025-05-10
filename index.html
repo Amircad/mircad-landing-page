@@ -1,91 +1,95 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mircad Design Service</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
+      background-color: #f2f7fb;
+      color: #333;
       margin: 0;
       padding: 0;
-      color: #1f2937;
     }
     header {
-      background-color: #1e3a8a;
+      background-color: #1f4e79;
       color: white;
-      padding: 2rem 1rem;
+      padding: 30px 20px;
       text-align: center;
     }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .slogan {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
     section {
-      padding: 2rem 1rem;
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
     }
-    h2 {
-      color: #1e40af;
-    }
     .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .card {
       background-color: white;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #1e3a8a;
+      padding: 20px;
+      background-color: #1f4e79;
       color: white;
-      margin-top: 2rem;
     }
-    .contact-button {
-      display: inline-block;
-      background-color: #2563eb;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 1rem;
-    }
-    .testimonials {
-      background-color: #e0f2fe;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 6px;
+    @media (max-width: 768px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Mircad Design Service</h1>
-    <p>SolidWorks CAD Design for Metal Fabrication, CNC Panels & Jig Fixtures</p>
-  </header>  <section>
+    <div class="slogan">Designing Precision. Delivering Innovation.</div>
+  </header>
+
+  <section>
     <h2>Our Services</h2>
     <div class="services">
-      <ul>
-        <li>Tank, Bracket & Frame Design</li>
-        <li>CNC Decorative Panels (e.g. grills, house numbers)</li>
-        <li>Jig & Fixture Design (for welding, assembly)</li>
-        <li>Delivery Formats: DWG, DXF, PDF</li>
-        <li>Fast turnaround & affordable pricing</li>
-      </ul>
-    </div><h2>Why Choose Us?</h2>
-<p>We understand the needs of workshops and small businesses. You get professional CAD support without the cost of hiring full-time staff. Focus on fabrication – leave the drawing to us!</p>
+      <div class="card">
+        <h3>Metal Fabrication Design</h3>
+        <p>Custom tank, enclosure, frame, and structural part design for fabrication.</p>
+      </div>
+      <div class="card">
+        <h3>Decorative Metal Panel Design</h3>
+        <p>House number plates, fence designs, and aesthetic laser-cut metal panels.</p>
+      </div>
+      <div class="card">
+        <h3>Construction Machine Drafting</h3>
+        <p>Detailed CAD for compactors, mixers, vibrators, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Jig & Fixture Design</h3>
+        <p>Precision jigs and fixtures to improve assembly and production processes.</p>
+      </div>
+    </div>
+  </section>
 
-<h2>Contact Us</h2>
-<p>Let’s talk about your project needs.</p>
-<p><strong>WhatsApp:</strong> <a href="https://wa.me/601169429738">+6011-6942 9738</a><br>
-<strong>Email:</strong> <a href="mailto:amircad77@gmail.com">amircad77@gmail.com</a></p>
-<a class="contact-button" href="https://wa.me/601169429738">Get in Touch</a>
+  <section>
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> amircad77@gmail.com</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/601169429738" target="_blank">+6011-6942 9738</a></p>
+  </section>
 
-<h2>Customer Testimonials</h2>
-<div class="testimonials">
-  <p><em>“Fast and accurate. Ready-to-fabricate files delivered on time!”</em> – Workshop Owner</p>
-  <p><em>“Very easy to work with and understood exactly what we needed.”</em> – CNC Operator</p>
-</div>
-
-  </section>  <footer>
+  <footer>
     &copy; 2025 Mircad Design Service. All rights reserved.
   </footer>
 </body>
