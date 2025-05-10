@@ -1,96 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mircad Design Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f7fb;
-      color: #333;
       margin: 0;
-      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #222;
     }
     header {
-      background-color: #1f4e79;
+      background-color: #1e3a5f;
       color: white;
-      padding: 30px 20px;
+      padding: 2rem;
       text-align: center;
     }
-    h1 {
+    header img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.5rem;
     }
-    .slogan {
-      font-size: 1.2em;
-      margin-top: 10px;
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
-    section {
-      padding: 40px 20px;
+    .section {
+      padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
-    .services {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+    .section h2 {
+      color: #1e3a5f;
+      margin-bottom: 1rem;
     }
-    .card {
+    .services, .contact, .gallery {
       background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    .services ul {
+      padding-left: 1.2rem;
+    }
+    .gallery img {
+      max-width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .contact a {
+      display: inline-block;
+      background-color: #1e3a5f;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #1f4e79;
-      color: white;
-    }
-    @media (max-width: 768px) {
-      .services {
-        grid-template-columns: 1fr;
-      }
+      padding: 1rem;
+      background-color: #e5e7eb;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
+    <img src="logo.png" alt="Mircad Logo" />
     <h1>Mircad Design Service</h1>
-    <div class="slogan">Designing Precision. Delivering Innovation.</div>
+    <p>Precision Metal Fabrication & CAD Drafting Services</p>
   </header>
 
-  <section>
+  <div class="section services">
     <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Metal Fabrication Design</h3>
-        <p>Custom tank, enclosure, frame, and structural part design for fabrication.</p>
-      </div>
-      <div class="card">
-        <h3>Decorative Metal Panel Design</h3>
-        <p>House number plates, fence designs, and aesthetic laser-cut metal panels.</p>
-      </div>
-      <div class="card">
-        <h3>Construction Machine Drafting</h3>
-        <p>Detailed CAD for compactors, mixers, vibrators, and more.</p>
-      </div>
-      <div class="card">
-        <h3>Jig & Fixture Design</h3>
-        <p>Precision jigs and fixtures to improve assembly and production processes.</p>
-      </div>
-    </div>
-  </section>
+    <ul>
+      <li>Custom Metal Fabrication Design (Tank, Panel, Bracket, etc.)</li>
+      <li>Jig & Fixture Design for Manufacturing</li>
+      <li>SolidWorks CAD Drafting & 3D Modeling</li>
+      <li>Technical Drawing & File Preparation (DWG, DXF, PDF)</li>
+    </ul>
+  </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> amircad77@gmail.com</p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/601169429738" target="_blank">+6011-6942 9738</a></p>
-  </section>
+  <div class="section gallery">
+    <h2>Project Preview</h2>
+    <img src="sample-project.jpg" alt="Sample CAD Work" />
+  </div>
+
+  <div class="section contact">
+    <h2>Contact Us</h2>
+    <p>Get a quote or ask us anything!</p>
+    <a href="https://wa.me/601169429738" target="_blank">Chat on WhatsApp</a><br>
+    <p>Email: amircad77@gmail.com</p>
+  </div>
 
   <footer>
     &copy; 2025 Mircad Design Service. All rights reserved.
   </footer>
+
 </body>
 </html>
