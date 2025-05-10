@@ -4,88 +4,208 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mircad Design Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Outfit', sans-serif;
+      background-color: #f9fbfc;
+      color: #222;
     }
     header {
-      background: linear-gradient(135deg, #003366, #005580);
+      background: url('https://via.placeholder.com/1600x600?text=Your+Design+Starts+Here') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+    header h1, header p {
+      z-index: 1;
     }
     header h1 {
-      font-size: 3em;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #003366;
-      font-size: 2rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    header p {
+      font-size: 1.2rem;
     }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .cta-button {
+      z-index: 1;
+      margin-top: 1.5rem;
+      background-color: #25D366;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
     }
-    .gallery figcaption {
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+    h2 {
+      color: #1e3a8a;
+      font-size: 2rem;
+      margin-bottom: 2rem;
       text-align: center;
-      margin-top: 8px;
-      font-size: 0.9rem;
+    }
+    .services, .portfolio, .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 0.75rem;
+      border: none;
+      background-color: #1e3a8a;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
     }
     footer {
-      background: #002244;
+      background: #1e3a8a;
       color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 20px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 100;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Mircad Design Service</h1>
-    <p>Precision Metal Fabrication & CAD Drafting</p>
+    <p>From CAD Concepts to Precision Metal Fabrication — We Make It Real</p>
+    <a href="https://wa.me/601169429738" class="cta-button">Message Us on WhatsApp</a>
   </header>
 
   <section>
-    <h2>Design Showcase</h2>
-    <div class="gallery">
-      <figure>
-        <img src="https://via.placeholder.com/400x250?text=Bracket+Design" alt="Bracket Design" />
-        <figcaption>Bracket Design</figcaption>
-      </figure>
-      <figure>
-        <img src="https://via.placeholder.com/400x250?text=Decorative+Panel" alt="Decorative Panel" />
-        <figcaption>Decorative Metal Panel</figcaption>
-      </figure>
-      <figure>
-        <img src="https://via.placeholder.com/400x250?text=Construction+Machine" alt="Machine Design" />
-        <figcaption>Construction Machine Design</figcaption>
-      </figure>
-      <figure>
-        <img src="https://via.placeholder.com/400x250?text=Jig+Fixture" alt="Jig and Fixture" />
-        <figcaption>Jig & Fixture Design</figcaption>
-      </figure>
+    <h2>Our Core Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Fabrication Drafting</h3>
+        <p>Custom tanks, brackets & enclosures using precise 3D SolidWorks CAD for manufacturing.</p>
+      </div>
+      <div class="card">
+        <h3>Decorative Panel Design</h3>
+        <p>Beautiful house numbers, fence motifs & artistic patterns ready for laser/plasma cutting.</p>
+      </div>
+      <div class="card">
+        <h3>Machine Design</h3>
+        <p>Solid design for concrete mixers, compactors, and construction tools — optimized for use & build.</p>
+      </div>
+      <div class="card">
+        <h3>Jigs & Fixtures</h3>
+        <p>Manufacturing aids designed to boost accuracy and productivity in your shop floor process.</p>
+      </div>
     </div>
   </section>
 
+  <section>
+    <h2>Design Showcase</h2>
+    <div class="portfolio">
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400?text=Bracket+Design" alt="Bracket Design" />
+        <p>Custom Bracket for Laser Cut & Welded Assembly</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400?text=Decorative+Panel" alt="Decorative Panel" />
+        <p>Floral-themed Decorative Panel — House Number</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400?text=Concrete+Mixer" alt="Machine Design" />
+        <p>Construction Mixer with Detachable Drum</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400?text=Fixture+Setup" alt="Jig Design" />
+        <p>Welding Fixture for Radiator Frame Assembly</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Client Testimonials</h2>
+    <div class="testimonials">
+      <div class="card">
+        <p>“Fast response, precise drawings and professional results.”</p>
+        <strong>- Encik Hafiz, Fabrication Contractor</strong>
+      </div>
+      <div class="card">
+        <p>“We got our machine draft done within 2 days — ready for manufacturing!”</p>
+        <strong>- Puan Aisyah, Builder</strong>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form action="mailto:amircad77@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <a href="https://wa.me/601169429738" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i> Chat Now
+  </a>
+
   <footer>
-    &copy; 2025 Mircad Design Service. All rights reserved.
+    &copy; 2025 Mircad Design Service. Engineered by Amir.
   </footer>
 </body>
 </html>
